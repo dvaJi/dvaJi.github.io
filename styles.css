@@ -1,0 +1,103 @@
+#app {
+  padding: 0, 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+img {
+  border-radius: 50%;
+}
+.head {
+  width: 100%;
+  height: 90vh;
+  margin-bottom: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: center;
+}
+.one-thing {
+  font-weight: 800;
+}
+.aboutme {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  background-color: #006691;
+  color: #cdcba6;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.skills .curious🤓,
+.skills .good😎 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+}
+.tag {
+  background-color: #52b3d9;
+  border-radius: 5px;
+  margin-right: 0.4em;
+  margin-bottom: 0.4em;
+  padding: 0.25em;
+  color: #2c3e50;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.social {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  background-color: #ba530f;
+  text-align: center;
+  color: #d3be00;
+}
+.social a {
+  color: #0eba97;
+  font-weight: 800;
+  text-decoration: none;
+}
+.footer {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background-color: #013243;
+  color: #e4f1fe;
+  text-align: center;
+}
