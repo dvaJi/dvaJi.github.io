@@ -1,0 +1,65 @@
+title: FullStack Developer
+experience:
+  - item:
+    corp: "MC+A"
+    position: "FullStack Developer"
+    start_date: "2019-01-16"
+    end_date: "now"
+    description:
+      "Made React apps served within the nav wrapper of the existing portal environment.
+      Implemented new features in a Flask Python environment with Jinja templating.
+      Prototyped a graphQL solution for retrieving data via SQLAlchemy ORM
+      Architected a solution for splitting the marketing site between a US and International site."
+    tech: [Java, Angular, Nodejs, GraphQL, Coveo, ElasticSearch]
+    href:
+      home: https://www.mcplusa.com/
+      github: https://github.com/mcplusa
+  - item:
+    corp: "Trebol IT"
+    position: "Java Developer"
+    start_date: "2018-10-01"
+    end_date: "2018-12-31"
+    description:
+      "**Made** React apps served within the nav wrapper of the existing portal environment.
+      Implemented new features in a Flask Python environment with Jinja templating.
+      Prototyped a graphQL solution for retrieving data via SQLAlchemy ORM
+      Architected a solution for splitting the marketing site between a US and International site."
+    tech: [Java, JSF, Primefaces, Oracle DB, Oracle Weblogic Server, SOAP, GIT]
+    href:
+      home: https://www.trebol-it.com/
+  - item:
+    corp: "Retail Pro"
+    position: "FrontEnd Developer"
+    start_date: "2016-08-28"
+    end_date: "2018-09-30"
+    description:
+      "**Made** React apps served within the nav wrapper of the existing portal environment.
+      Implemented new features in a Flask Python environment with Jinja templating.
+      Prototyped a graphQL solution for retrieving data via SQLAlchemy ORM
+      Architected a solution for splitting the marketing site between a US and International site."
+    tech: [AngularJS, Java, PostgreSQL, Bootstrap, Material Design, Git, Glassfish, REST API]
+    href:
+      home: http://www.zolbit.com/
+about: "asdasdadasdasdadssa"
+works:
+  - title: "ReaderFront"
+    description: "A manga CMS for scanlation groups"
+    href: "https://github.com/dvaJi/ReaderFront"
+  - title: "souka"
+    description: "It is a free and open source comic translation aid"
+    href: "https://github.com/dvaJi/souka"
+  - title: "rwyupdates"
+    description: "Mangaupdates crawler using puppeteer"
+    href: "https://github.com/dvaJi/rwyupdates"
+acc:
+  email:
+    - name: francisco_p@outlook.com
+      url: mailto:francisco_p@outlook.com
+  dev:
+    - name: "Github: dvaJi"
+      url: https://github.com/dvaJi/
+  social:
+    - name: "Twitter: dvaji_"
+      url: https://twitter.com/dvaji_
+    - name: "Discord: Dova#6347"
+      url:
