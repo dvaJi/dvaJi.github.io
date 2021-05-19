@@ -5,7 +5,11 @@ import matter from "gray-matter";
 const contentsDirectory = join(process.cwd(), "data", "blog");
 
 export function getContentSlugs() {
-  return fs.readdirSync(contentsDirectory);
+  if (fs.existsSync(contentsDirectory)) {
+    return fs.readdirSync(contentsDirectory);
+  }
+
+  return [];
 }
 
 export function getContents() {
