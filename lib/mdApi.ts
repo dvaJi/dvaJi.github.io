@@ -12,9 +12,18 @@ export function getContentSlugs() {
   return [];
 }
 
+export interface BlogPost {
+  title: string;
+  slug: string;
+  content: string;
+  tags: string[];
+  date: string;
+  summary: string;
+}
+
 export function getContents() {
   const slugs = getContentSlugs();
-  const contents: { [prop: string]: string }[] = [];
+  const contents: BlogPost[] = [];
   slugs.forEach((slug) => {
     const data = getContentBySlug(slug);
     contents.push(data);
@@ -29,13 +38,13 @@ export function dateSortDesc(a: string, b: string) {
   return 0;
 }
 
-export function getContentBySlug(slug: string) {
+export function getContentBySlug(slug: string): BlogPost {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(contentsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const items: { [prop: string]: string } = {};
+  let items: any = {};
 
   items["slug"] = realSlug;
   items["content"] = content;

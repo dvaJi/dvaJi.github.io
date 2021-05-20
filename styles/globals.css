@@ -33,6 +33,10 @@ svg {
     @apply my-0 mx-auto w-screen max-w-4xl;
   }
 
+  .main-content {
+    min-height: calc(100vh - 130px);
+  }
+
   .header-nav {
     @apply flex justify-center items-center h-14 w-full z-10 sticky top-0 bg-gray-900 bg-opacity-90;
   }
@@ -75,11 +79,6 @@ svg {
 
   .intro-cont > .subtitle {
     @apply text-4xl;
-  }
-
-  /* BLOG */
-  .blog-section {
-    min-height: calc(100vh - 140px);
   }
 
   /* SKILLS */
