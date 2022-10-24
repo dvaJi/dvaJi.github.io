@@ -1,0 +1,57 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("./snippets/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-50 text-black">
+    <Header />
+    <main class="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
+      <div
+        class="flex flex-col items-start justify-center max-w-2xl mx-auto mb-16"
+      >
+        <h1
+          class="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white"
+        >
+          Code Snippets
+        </h1>
+        <p class="mb-4 text-gray-600 dark:text-gray-400">
+          These are a collection of code snippets I've used in the past and
+          saved. Some are Serverless Functions, which include set up
+          instructions. Others are anything from random CSS snippets to Node.js
+          scripts.
+        </p>
+        <div class="grid w-full grid-cols-1 gap-4 my-2 mt-4 sm:grid-cols-2">
+          {
+            posts.map((post) => (
+              <a
+                class="border-grey-200 w-full rounded-lg border bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
+                href={post.url}
+              >
+                <h3 class="mt-2 text-left text-xl font-bold text-gray-900 dark:text-gray-100">
+                  {post.frontmatter.title}
+                </h3>
+                <p class="mt-1 text-gray-700 dark:text-gray-400">
+                  {post.frontmatter.description}
+                </p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <Footer />
+    </main>
+  </body>
+</html>

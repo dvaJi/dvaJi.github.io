@@ -3,6 +3,7 @@
 # rss feed
 /public/index.xml 
 public/sitemap.xml
+dist
 
 # dependencies
 /node_modules
