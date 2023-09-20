@@ -1,13 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./snippets/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("snippets")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
@@ -37,14 +36,14 @@ const posts = (await Astro.glob("./snippets/*.{md,mdx}")).sort(
           {
             posts.map((post) => (
               <a
-                class="border-grey-200 w-full rounded-lg border bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
-                href={post.url}
+              class="mb-8 w-full transition-colors duration-150 bg-gradient-to-r from-transparent hover:via-zinc-800/50 to-transparent p-2 rounded border-2 border-zinc-900 hover:border-zinc-800"
+                href={`/snippets/${post.slug}`}
               >
                 <h3 class="mt-2 text-left text-xl font-bold text-gray-900 dark:text-gray-100">
-                  {post.frontmatter.title}
+                  {post.data.title}
                 </h3>
                 <p class="mt-1 text-gray-700 dark:text-gray-400">
-                  {post.frontmatter.description}
+                  {post.data.description}
                 </p>
               </a>
             ))

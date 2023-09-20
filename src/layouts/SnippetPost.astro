@@ -3,19 +3,10 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../../styles/globals.css";
+import type { CollectionEntry } from "astro:content";
 
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-  };
-}
-const {
-  content: { title, description, pubDate, updatedDate, heroImage },
-} = Astro.props;
+type Props = CollectionEntry<"snippets">["data"];
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,7 +15,7 @@ const {
   </head>
 
   <body class="bg-gray-50 dark:bg-gray-900 dark:text-gray-50 text-black">
-    <Header />
+    <Header transition:persist />
     <main class="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
       <article
         class="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full"
@@ -55,11 +46,11 @@ const {
             }
           </div>
         </div>
-        <div class="prose dark:prose-dark w-full">
+        <div class="prose prose-base dark:prose-invert prose-a:text-blue-600">
           <slot />
         </div>
-        <Footer />
       </article>
+      <Footer />
     </main>
   </body>
 </html>

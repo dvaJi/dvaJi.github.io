@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Understanding Big O Time Complexity"
 description: "Big O notation is a way to describe the performance of an algorithm. It's a way to compare the efficiency of different algorithms."
 pubDate: "Oct 27 2022"

@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Create a simple compiler in javascript"
 description: "In this post we will build a simple compiler in javascript. The compiler will be able to take a string as input and will output a new string."
 pubDate: "Oct 24 2022"
@@ -485,7 +484,3 @@ add(2, subtract(4, 2));
 [Writing a Compiler in Go](https://compilerbook.com/)  
 [How to Write a Compiler](https://www.sigbus.info/compilerbook)  
 [The Super Tiny Compiler](https://github.com/jamiebuilds/the-super-tiny-compiler)
-
-## License
-
-[MIT](https://opensource.org/licenses/MIT)

@@ -1,15 +1,14 @@
 ---
-layout: "../../layouts/BlogPost.astro"
 title: "Protect NextJS API with Zod"
 description: "Zod is a TypeScript library for data validation. It's a great tool to validate data in your NextJS API routes."
 pubDate: "Nov 24 2022"
 ---
 
-A basic step for secure our APIs endpoints is to validate the data that we receive, various libraries can help us with this task, in this post I will show you how to use Zod to validate data in your NextJS API routes.
+A basic step for securing our APIs is to validate the data that we receive. Various libraries can help us with this task, and in this post, we will demonstrate how to use Zod to validate data in your NextJS API routes.
 
 ## What is Zod?
 
-Zod is a TypeScript library for data validation. It's a great tool to validate data in your NextJS API routes.
+Zod is a TypeScript library for data validation. It's a great tool for validating data in your NextJS API routes as it allows you to create specific schemas to validate the data you receive.
 
 ## Install Zod
 

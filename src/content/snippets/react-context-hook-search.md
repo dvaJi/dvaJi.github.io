@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/SnippetPost.astro"
 title: "Search"
 description: "React Context hook for search values."
 pubDate: "Oct 21 2022"
